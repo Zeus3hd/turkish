@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
-import Features from "./components/Feautres";
+import Features from "./components/Features";
 import Team from "./components/Team";
 import styled from "styled-components";
 

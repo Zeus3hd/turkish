@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import headerPic from "../assets/header2.jpg";
+import headerPic from "../../assets/header2.jpg";
 
 const Wrapper = styled.header`
   width: 100%;
