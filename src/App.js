@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Features from "./components/Feautres";
+import Team from "./components/Team";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -21,6 +22,7 @@ function App() {
       <Header />
       <Wrapper>
         <Features />
+        <Team />
       </Wrapper>
     </div>
   );
