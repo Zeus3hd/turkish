@@ -24,9 +24,30 @@ const Wrapper = styled.nav`
     }
   }
 `;
+
+const SideBar = styled.div`
+  position: fixed;
+  width: 50%;
+  max-width: 400px;
+  height: 100%;
+  background: rgba(220, 200, 200, 0.8);
+  left: ${props => (props.sideBarLeft ? "0" : "-50%")};
+  transition: 0.5s;
+  ul {
+    list-style-type: none;
+    padding: 3rem 0;
+    margin: 0;
+    li {
+      padding: 1rem 0;
+      margin: 0;
+      padding-left: 1rem;
+    }
+  }
+`;
 const Navbar = () => {
   const [navbarColors, setColor] = useState("none");
   const [navbarButtonsColors, setNavbarButtonsColors] = useState("white");
+  const [sideBarLeft, setSideBarLeft] = useState(false);
 
   useEffect(() => {
     const changeNavColors = () => {
@@ -53,9 +74,35 @@ const Navbar = () => {
       <Button className="nav-buttons">
         <InfoIcon />
       </Button>
-      <Button className="nav-buttons">
+      <Button
+        className="nav-buttons"
+        onClick={() => setSideBarLeft(!sideBarLeft)}
+      >
         <MenuIcon />
       </Button>
+      <SideBar sideBarLeft={sideBarLeft}>
+        <ul>
+          <li>
+            <Button className="nav-buttons">Turkish Heights</Button>
+          </li>
+          <li>
+            <Button className="nav-buttons">
+              <HomeIcon style={{ padding: "0 1rem" }} /> HOME
+            </Button>
+          </li>
+          <li>
+            <Button className="nav-buttons">
+              <PhotoLibraryIcon style={{ padding: "0 1rem" }} />
+              GALLERY
+            </Button>
+          </li>
+          <li>
+            <Button className="nav-buttons">
+              <InfoIcon style={{ padding: "0 1rem" }} /> ABOUT US
+            </Button>
+          </li>
+        </ul>
+      </SideBar>
     </Wrapper>
   );
 };

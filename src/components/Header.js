@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import headerPic from "../assets/header2.jpg";
-import { Button } from "@material-ui/core";
 import MouseIcon from "@material-ui/icons/Mouse";
 const Wrapper = styled.header`
   width: 100%;
