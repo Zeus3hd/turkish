@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 import headerPic from "../assets/header2.jpg";
-import MouseIcon from "@material-ui/icons/Mouse";
+
 const Wrapper = styled.header`
   width: 100%;
   height: 100vh;
@@ -42,23 +41,4 @@ const ScrollButton = styled.div`
   color: rgba(255, 255, 255, 0.8);
 `;
 
-const Header = () => {
-  return (
-    <Wrapper>
-      <HeaderContent>
-        <HeaderText>
-          <h2>Turkish Heights</h2>
-          <p>
-            The resulting icon can be used as is, or included as a child for
-            other Material-UI components that use icons.
-          </p>
-        </HeaderText>
-      </HeaderContent>
-      <ScrollButton>
-        <MouseIcon />
-      </ScrollButton>
-    </Wrapper>
-  );
-};
-
-export default Header;
+export {Wrapper, HeaderContent, HeaderText, ScrollButton};
