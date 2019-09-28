@@ -36,7 +36,7 @@ const HeaderText = styled.div`
 
 const ScrollButton = styled.div`
   position: absolute;
-  bottom: 0;
+  bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
   color: rgba(255, 255, 255, 0.8);
