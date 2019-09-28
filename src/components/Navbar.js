@@ -40,7 +40,7 @@ const SideBar = styled.div`
     li {
       padding: 1rem 0;
       margin: 0;
-      padding-left: 1rem;
+      padding-left: 0.6rem;
     }
   }
 `;
