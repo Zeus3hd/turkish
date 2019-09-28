@@ -13,7 +13,8 @@ const Features = () => {
         textAlign: "center",
         color: "#555555",
         lineHeight: "1.5rem",
-        letterSpacing: "1px"
+        letterSpacing: "1px",
+        margin: "2rem 0"
       }}
     >
       <Grid item xs={12}>
@@ -48,9 +49,6 @@ const Features = () => {
           you can eject at any time. This command will remove the single build
           dependency from your project.
         </p>
-      </Grid>
-      <Grid item xs={12}>
-        <hr style={{ width: "50%", opacity: 0.5 }} />
       </Grid>
     </Grid>
   );
