@@ -28,7 +28,9 @@ const Quotes = () => {
         <div
           style={{
             display: "flex",
-            margin: "2rem"
+            margin: "2rem",
+            letterSpacing: "1px",
+            color: "#dbdbdb"
           }}
         >
           <div style={{ margin: "0 1rem" }}>
@@ -48,7 +50,9 @@ const Quotes = () => {
         <div
           style={{
             display: "flex",
-            margin: "2rem"
+            margin: "2rem",
+            letterSpacing: "1px",
+            color: "#dbdbdb"
           }}
         >
           <div style={{ margin: "0 1rem" }}>
@@ -68,7 +72,9 @@ const Quotes = () => {
         <div
           style={{
             display: "flex",
-            margin: "2rem"
+            margin: "2rem",
+            letterSpacing: "1px",
+            color: "#dbdbdb"
           }}
         >
           <div style={{ margin: "0 1rem" }}>
@@ -84,6 +90,7 @@ const Quotes = () => {
           </div>
         </div>
       </Grid>
+      <Grid item></Grid>
     </Grid>
   );
 };
