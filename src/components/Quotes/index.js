@@ -35,7 +35,8 @@ const Quotes = () => {
         letterSpacing: "1px",
         color: "#dbdbdb",
         fontWeight: 500,
-        paddingBottom: "1rem"
+        paddingBottom: "1rem",
+        marginBottom: "2.5rem"
       }}
     >
       <Grid item xs={12} sm={12} md={12}>
