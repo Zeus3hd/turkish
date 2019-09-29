@@ -7,9 +7,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
-import avatar1 from "../assets/abdelkareem.jpg";
-import avatar2 from "../assets/Yunus.jpg";
-import avatar3 from "../assets/abudana.jpg";
+import avatar1 from "../../assets/abdelkareem.jpg";
+import avatar2 from "../../assets/Yunus.jpg";
+import avatar3 from "../../assets/abudana.jpg";
 const useStyles = makeStyles({
   avatar: {
     margin: 10

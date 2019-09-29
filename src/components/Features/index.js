@@ -7,7 +7,7 @@ const Features = () => {
   return (
     <Grid
       container
-      spacing={3}
+      spacing={2}
       justify="center"
       style={{
         textAlign: "center",
