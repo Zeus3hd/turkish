@@ -6,7 +6,7 @@ import Features from "./components/Features";
 import Team from "./components/Team";
 import Gallery from "./components/Gallery";
 import styled from "styled-components";
-
+import Quotes from "./components/Quotes";
 const Wrapper = styled.div`
   width: 90%;
   margin: auto;
@@ -26,6 +26,9 @@ function App() {
         <Team />
       </Wrapper>
       <Gallery />
+      <Wrapper style={{ top: 0, background: "#555555" }}>
+        <Quotes />
+      </Wrapper>
     </div>
   );
 }
