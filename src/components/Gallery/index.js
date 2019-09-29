@@ -3,12 +3,18 @@ import GalleryItem from "../GalleryItem";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
+import Filter from "../Filter";
 const Gallery = () => {
   return (
     <Container>
       <Grid container justify="center">
         <Grid item style={{ margin: "2rem", color: "#555555" }}>
           <h3>-Our Collection-</h3>
+        </Grid>
+      </Grid>
+      <Grid container justify="center">
+        <Grid item style={{ width: "100%", marginBottom: "3rem" }}>
+          <Filter />
         </Grid>
       </Grid>
       <Grid container justify="space-between" spacing={2}>
