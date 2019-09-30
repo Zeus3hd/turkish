@@ -7,6 +7,7 @@ import Team from "./components/Team";
 import Gallery from "./components/Gallery";
 import styled from "styled-components";
 import Quotes from "./components/Quotes";
+import Packages from "./components/Packages";
 const Wrapper = styled.div`
   width: 90%;
   margin: auto;
@@ -29,6 +30,7 @@ function App() {
       <Wrapper style={{ top: 0, background: "#555555" }}>
         <Quotes />
       </Wrapper>
+      <Packages />
     </div>
   );
 }
