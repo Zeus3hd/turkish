@@ -9,6 +9,7 @@ import styled from "styled-components";
 import Quotes from "./components/Quotes";
 import Packages from "./components/Packages";
 import Map from "./components/Map";
+import Footer from "./components/Footer";
 const Wrapper = styled.div`
   width: 90%;
   margin: auto;
@@ -33,6 +34,7 @@ function App() {
       </Wrapper>
       <Packages />
       <Map />
+      <Footer />
     </div>
   );
 }
