@@ -4,13 +4,21 @@ import HomeIcon from "@material-ui/icons/Home";
 import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import InfoIcon from "@material-ui/icons/Info";
 import MenuIcon from "@material-ui/icons/Menu";
-import {Wrapper, SideBar} from './Navbar.style';
+import { Wrapper, SideBar } from "./Navbar.style";
+import AboutUs from "../AboutUs";
 
 const Navbar = () => {
   const [navbarColors, setColor] = useState("none");
   const [navbarButtonsColors, setNavbarButtonsColors] = useState("white");
   const [sideBarLeft, setSideBarLeft] = useState(false);
+  const [open, setOpen] = React.useState(false);
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
 
+  const handleClose = () => {
+    setOpen(false);
+  };
   useEffect(() => {
     const changeNavColors = () => {
       if (window.pageYOffset >= 200) {
@@ -59,9 +67,10 @@ const Navbar = () => {
             </Button>
           </li>
           <li>
-            <Button className="nav-buttons">
+            <Button className="nav-buttons" onClick={handleClickOpen}>
               <InfoIcon style={{ padding: "0 1rem" }} /> ABOUT US
             </Button>
+            <AboutUs open={open} handleClose={handleClose} />
           </li>
         </ul>
       </SideBar>
