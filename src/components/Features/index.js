@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import AvTimerIcon from "@material-ui/icons/AvTimer";
 import ApartmentIcon from "@material-ui/icons/Apartment";
 import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
-const Features = () => {
+const Features = props => {
   return (
     <Grid
       container
@@ -18,7 +18,7 @@ const Features = () => {
       }}
     >
       <Grid item xs={12}>
-        <h2>-WHY US-</h2>
+        <h2>{props.title ? props.title : "-Why Us-"}</h2>
         <hr style={{ width: "30%", opacity: 0.5 }} />
       </Grid>
       <Grid item xs={12} sm={3}>

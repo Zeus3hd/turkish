@@ -44,4 +44,4 @@ const SideBar = styled.div`
   }
 `;
 
-export {Wrapper, SideBar};
+export { Wrapper, SideBar };

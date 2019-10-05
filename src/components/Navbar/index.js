@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Button from "@material-ui/core/Button";
 import HomeIcon from "@material-ui/icons/Home";
 import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import InfoIcon from "@material-ui/icons/Info";
 import MenuIcon from "@material-ui/icons/Menu";
-import {Wrapper, SideBar} from './Navbar.style';
+import { Wrapper, SideBar } from "./Navbar.style";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [navbarColors, setColor] = useState("none");
@@ -26,42 +26,76 @@ const Navbar = () => {
   });
   return (
     <Wrapper colors={navbarColors} buttonColors={navbarButtonsColors}>
-      <Button className="nav-buttons">Turkish Heights</Button>
-      <Button className="nav-buttons">
+      <Link
+        to="/"
+        className="nav-buttons"
+        style={{ alignSelf: "center", textDecoration: "none" }}
+      >
+        Turkish Heights
+      </Link>
+      <Link to="/" className="nav-buttons" style={{ alignSelf: "center" }}>
         <HomeIcon />
-      </Button>
-      <Button className="nav-buttons">
+      </Link>
+      <Link
+        to="/gallery"
+        className="nav-buttons"
+        style={{ alignSelf: "center" }}
+      >
         <PhotoLibraryIcon />
-      </Button>
-      <Button className="nav-buttons">
+      </Link>
+      <Link
+        to="/about-us"
+        className="nav-buttons"
+        style={{ alignSelf: "center" }}
+      >
         <InfoIcon />
-      </Button>
-      <Button
+      </Link>
+      <Link
+        style={{ alignSelf: "center" }}
+        to="#"
         className="nav-buttons"
         onClick={() => setSideBarLeft(!sideBarLeft)}
       >
         <MenuIcon />
-      </Button>
+      </Link>
       <SideBar sideBarLeft={sideBarLeft}>
         <ul>
           <li>
-            <Button className="nav-buttons">Turkish Heights</Button>
+            <Link
+              to="/"
+              className="nav-buttons"
+              style={{ textDecoration: "none" }}
+            >
+              Turkish Heights
+            </Link>
           </li>
           <li>
-            <Button className="nav-buttons">
+            <Link
+              to="/"
+              className="nav-buttons"
+              style={{ textDecoration: "none" }}
+            >
               <HomeIcon style={{ padding: "0 1rem" }} /> HOME
-            </Button>
+            </Link>
           </li>
           <li>
-            <Button className="nav-buttons">
+            <Link
+              to="/gallery"
+              className="nav-buttons"
+              style={{ textDecoration: "none" }}
+            >
               <PhotoLibraryIcon style={{ padding: "0 1rem" }} />
               GALLERY
-            </Button>
+            </Link>
           </li>
           <li>
-            <Button className="nav-buttons">
+            <Link
+              to="/about-us"
+              className="nav-buttons"
+              style={{ textDecoration: "none" }}
+            >
               <InfoIcon style={{ padding: "0 1rem" }} /> ABOUT US
-            </Button>
+            </Link>
           </li>
         </ul>
       </SideBar>
