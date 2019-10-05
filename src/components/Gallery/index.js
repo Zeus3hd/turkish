@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 import Filter from "../Filter";
+import { Link } from "react-router-dom";
 const Gallery = props => {
   return (
     <Container>
@@ -52,7 +53,9 @@ const Gallery = props => {
           color="primary"
           style={{ background: "#5677AA", margin: "2rem" }}
         >
-          More...
+          <Link style={{ textDecoration: "none", color: "#fff" }} to="/gallery">
+            More...
+          </Link>
         </Button>
       </Grid>
     </Container>
