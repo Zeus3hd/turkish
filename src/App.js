@@ -10,6 +10,11 @@ import Quotes from "./components/Quotes";
 import Packages from "./components/Packages";
 import Map from "./components/Map";
 import Footer from "./components/Footer";
+import AboutUs from "./components/AboutUs";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import GalleryPage from "./components/GalleryPage";
+import _404 from "./components/404";
+
 const Wrapper = styled.div`
   width: 90%;
   margin: auto;
@@ -21,21 +26,35 @@ const Wrapper = styled.div`
 `;
 function App() {
   return (
-    <div className="App">
+    <Router className="App">
       <Navbar />
-      <Header />
-      <Wrapper>
-        <Features />
-        <Team />
-      </Wrapper>
-      <Gallery />
-      <Wrapper style={{ top: 0, background: "#555555" }}>
-        <Quotes />
-      </Wrapper>
-      <Packages />
-      <Map />
+      <Switch>
+        <Route exact path="/">
+          <Header />
+          <Wrapper>
+            <Features />
+            <Team />
+          </Wrapper>
+          <Gallery />
+          <Wrapper style={{ top: 0, background: "#555555" }}>
+            <Quotes />
+          </Wrapper>
+          <Packages />
+          <Map />
+        </Route>
+        <Route path="/about-us">
+          <AboutUs />
+        </Route>
+        <Route path="/gallery">
+          <GalleryPage />
+        </Route>
+        <Route>
+          {/*eslint-disable-next-line*/}
+          <_404 />
+        </Route>
+      </Switch>
       <Footer />
-    </div>
+    </Router>
   );
 }
 
