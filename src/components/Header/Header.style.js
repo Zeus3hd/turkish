@@ -41,4 +41,4 @@ const ScrollButton = styled.div`
   color: rgba(255, 255, 255, 0.8);
 `;
 
-export {Wrapper, HeaderContent, HeaderText, ScrollButton};
+export { Wrapper, HeaderContent, HeaderText, ScrollButton };

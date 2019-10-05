@@ -1,8 +1,13 @@
 import React from "react";
 import MouseIcon from "@material-ui/icons/Mouse";
-import {Wrapper, HeaderContent, HeaderText, ScrollButton} from './Header.style'
+import {
+  Wrapper,
+  HeaderContent,
+  HeaderText,
+  ScrollButton
+} from "./Header.style";
 
-const Header = () => {
+const Header = props => {
   return (
     <Wrapper>
       <HeaderContent>
