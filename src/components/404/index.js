@@ -1,9 +1,11 @@
 import React from "react";
 import Header from "../Header";
+import headerr3 from "../../assets/headerr3.jpeg";
+
 const _404 = () => {
   return (
     <div>
-      <Header />
+      <Header image={headerr3} />
       <h1
         style={{
           alignSelf: "center",
