@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bbecde6e.chunk.css",
+    "main.js": "/static/js/main.2742f038.chunk.js",
+    "main.js.map": "/static/js/main.2742f038.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e8a2ff1f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e8a2ff1f.js.map",
+    "static/js/2.b2a61954.chunk.js": "/static/js/2.b2a61954.chunk.js",
+    "static/js/2.b2a61954.chunk.js.map": "/static/js/2.b2a61954.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.54c9ce2b39ab285b2ccc1b4115c30618.js": "/precache-manifest.54c9ce2b39ab285b2ccc1b4115c30618.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.bbecde6e.chunk.css.map": "/static/css/main.bbecde6e.chunk.css.map",
+    "static/media/Yunus.jpg": "/static/media/Yunus.7b5a1e02.jpg",
+    "static/media/abdelkareem.jpg": "/static/media/abdelkareem.7ef5ab02.jpg",
+    "static/media/abudana.jpg": "/static/media/abudana.67fe54bf.jpg",
+    "static/media/airbnb.png": "/static/media/airbnb.63567cd6.png",
+    "static/media/header11.jpg": "/static/media/header11.1823aa0e.jpg",
+    "static/media/header2.jpg": "/static/media/header2.db459c80.jpg",
+    "static/media/headerr1.jpeg": "/static/media/headerr1.0df231e5.jpeg",
+    "static/media/headerr2.jpeg": "/static/media/headerr2.fec99ff5.jpeg",
+    "static/media/headerr3.jpeg": "/static/media/headerr3.38c3790f.jpeg",
+    "static/media/logo.png": "/static/media/logo.e103503f.png",
+    "static/media/turkishairlines.png": "/static/media/turkishairlines.d979df1b.png",
+    "static/media/vodafone.png": "/static/media/vodafone.3dd232f2.png"
+  }
+}
