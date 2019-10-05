@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GalleryPage from "./components/GalleryPage";
+import _404 from "./components/404";
 
 const Wrapper = styled.div`
   width: 90%;
@@ -46,6 +47,9 @@ function App() {
         </Route>
         <Route path="/gallery">
           <GalleryPage />
+        </Route>
+        <Route>
+          <_404 />
         </Route>
       </Switch>
       <Footer />
