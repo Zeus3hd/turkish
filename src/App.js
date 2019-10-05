@@ -49,6 +49,7 @@ function App() {
           <GalleryPage />
         </Route>
         <Route>
+          {/*eslint-disable-next-line*/}
           <_404 />
         </Route>
       </Switch>
