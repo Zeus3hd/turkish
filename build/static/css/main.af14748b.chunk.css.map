@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,KACE,QAAS,CACT,mCAA0C,CAE1C,kCAAmC,CACnC,iCACF","file":"main.af14748b.chunk.css","sourcesContent":["body {\n  margin: 0;\n  font-family: \"Cairo\", \"Roboto\", sans-serif;\n\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n"]}
