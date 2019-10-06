@@ -5,8 +5,10 @@ import InfoIcon from "@material-ui/icons/Info";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Wrapper, SideBar } from "./Navbar.style";
 import { Link } from "react-router-dom";
+import LanguageIcon from "@material-ui/icons/Language";
+import { Button } from "@material-ui/core";
 
-const Navbar = () => {
+const Navbar = props => {
   const [navbarColors, setColor] = useState("none");
   const [navbarButtonsColors, setNavbarButtonsColors] = useState("white");
   const [sideBarLeft, setSideBarLeft] = useState(false);
@@ -75,7 +77,7 @@ const Navbar = () => {
               className="nav-buttons"
               style={{ textDecoration: "none" }}
             >
-              <HomeIcon style={{ padding: "0 1rem" }} /> HOME
+              <HomeIcon style={{ padding: "0 1rem" }} /> {props.texts.Home}
             </Link>
           </li>
           <li>
@@ -85,7 +87,7 @@ const Navbar = () => {
               style={{ textDecoration: "none" }}
             >
               <PhotoLibraryIcon style={{ padding: "0 1rem" }} />
-              GALLERY
+              {props.texts.Gallery}
             </Link>
           </li>
           <li>
@@ -94,8 +96,18 @@ const Navbar = () => {
               className="nav-buttons"
               style={{ textDecoration: "none" }}
             >
-              <InfoIcon style={{ padding: "0 1rem" }} /> ABOUT US
+              <InfoIcon style={{ padding: "0 1rem" }} /> {props.texts.AboutUs}
             </Link>
+          </li>
+          <li>
+            <Button
+              onClick={props.switchLang}
+              to="/about-us"
+              className="nav-buttons"
+              style={{ textDecoration: "none" }}
+            >
+              <LanguageIcon style={{ padding: "0 1rem" }} />
+            </Button>
           </li>
         </ul>
       </SideBar>

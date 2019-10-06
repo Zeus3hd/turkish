@@ -10,41 +10,41 @@ const Gallery = props => {
     <Container>
       <Grid container justify="center">
         <Grid item style={{ margin: "2rem", color: "#555555" }}>
-          <h3>{props.title}</h3>
+          <h3>-{props.title ? props.title : props.texts.GalleryTitle}-</h3>
         </Grid>
       </Grid>
       <Grid container justify="center">
         <Grid item style={{ width: "100%", marginBottom: "3rem" }}>
-          <Filter />
+          <Filter texts={props.texts} />
         </Grid>
       </Grid>
       <Grid container justify="space-between" spacing={2}>
         <Grid item xs={12} sm={3}>
-          <GalleryItem />
+          <GalleryItem texts={props.texts} />
         </Grid>
         <Grid item xs={12} sm={3}>
-          <GalleryItem />
+          <GalleryItem texts={props.texts} />
         </Grid>
         <Grid item xs={12} sm={3}>
-          <GalleryItem />
+          <GalleryItem texts={props.texts} />
         </Grid>
         <Grid item xs={12} sm={3}>
-          <GalleryItem />
+          <GalleryItem texts={props.texts} />
         </Grid>
         <Grid item xs={12} sm={3}>
-          <GalleryItem />
+          <GalleryItem texts={props.texts} />
         </Grid>
         <Grid item xs={12} sm={3}>
-          <GalleryItem />
+          <GalleryItem texts={props.texts} />
         </Grid>
         <Grid item xs={12} sm={3}>
-          <GalleryItem />
+          <GalleryItem texts={props.texts} />
         </Grid>
         <Grid item xs={12} sm={3}>
-          <GalleryItem />
+          <GalleryItem texts={props.texts} />
         </Grid>
         <Grid item xs={12} sm={3}>
-          <GalleryItem />
+          <GalleryItem texts={props.texts} />
         </Grid>
       </Grid>
       <Grid container justify="center">
@@ -54,7 +54,7 @@ const Gallery = props => {
           style={{ background: "#5677AA", margin: "2rem" }}
         >
           <Link style={{ textDecoration: "none", color: "#fff" }} to="/gallery">
-            More...
+            {props.texts.GalleryButton}
           </Link>
         </Button>
       </Grid>

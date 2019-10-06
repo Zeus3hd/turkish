@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     height: 150
   }
 });
-const Quotes = () => {
+const Quotes = props => {
   const classes = useStyles();
 
   return (
@@ -40,12 +40,8 @@ const Quotes = () => {
       }}
     >
       <Grid item xs={12} sm={12} md={12}>
-        <h2 style={{ margin: "2rem" }}>Trusted by 200,000 People</h2>
-        <p style={{ margin: "0 2rem" }}>
-          The UI Kits, Templates and Dashboards that we've created are used by
-          330,000+ web developers in over 576.000 Web Projects. This is what
-          some of them think:
-        </p>
+        <h2 style={{ margin: "2rem" }}>{props.texts.QuotesTitle}</h2>
+        <p style={{ margin: "0 2rem" }}>{props.texts.QuotesParagraph}</p>
       </Grid>
       <Grid item xs={12} sm={3}>
         <Card
@@ -57,11 +53,8 @@ const Quotes = () => {
         >
           <CardContent style={{ display: "flex", flexDirection: "column" }}>
             <Avatar src={avatar1} className={classes.bigAvatar} />
-            <h3 style={{ color: "#555555" }}>Abd Al-Kareem</h3>
-            <p>
-              If you aren’t satisfied with the build tool and configuration
-              choices
-            </p>
+            <h3 style={{ color: "#555555" }}>{props.texts.QuotesName1}</h3>
+            <p>{props.texts.QuotesParagraph1}</p>
             <div>
               <Button>
                 <FacebookIcon style={{ color: "#555555" }} />
@@ -83,11 +76,8 @@ const Quotes = () => {
         >
           <CardContent style={{ display: "flex", flexDirection: "column" }}>
             <Avatar src={avatar2} className={classes.bigAvatar} />
-            <h3 style={{ color: "#555555" }}>Abd Al-Kareem</h3>
-            <p>
-              If you aren’t satisfied with the build tool and configuration
-              choices
-            </p>
+            <h3 style={{ color: "#555555" }}>{props.texts.QuotesName2}</h3>
+            <p>{props.texts.QuotesParagraph2}</p>
             <div>
               <Button>
                 <FacebookIcon style={{ color: "#555555" }} />
@@ -109,11 +99,8 @@ const Quotes = () => {
         >
           <CardContent style={{ display: "flex", flexDirection: "column" }}>
             <Avatar src={avatar3} className={classes.bigAvatar} />
-            <h3 style={{ color: "#555555" }}>Abd Al-Kareem</h3>
-            <p>
-              If you aren’t satisfied with the build tool and configuration
-              choices
-            </p>
+            <h3 style={{ color: "#555555" }}>{props.texts.QuotesName3}</h3>
+            <p>{props.texts.QuotesParagraph3}</p>
             <div>
               <Button>
                 <FacebookIcon style={{ color: "#555555" }} />

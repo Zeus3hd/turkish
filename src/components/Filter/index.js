@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     width: 200
   }
 }));
-const Filter = () => {
+const Filter = props => {
   const classes = useStyles();
   //eslint-disable-next-line
   const [values, setValues] = useState("Esenyurt");
@@ -43,14 +43,16 @@ const Filter = () => {
           id="panel1a-header"
         >
           <Typography className={classes.heading}>
-            <SortIcon /> <span>Sort Items</span>
+            <SortIcon /> <span>{props.texts.FilterSort}</span>
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           {/*Location Form */}
           <form className={classes.root} autoComplete="off">
             <FormControl className={classes.formControl}>
-              <InputLabel htmlFor="filter-location">Location</InputLabel>
+              <InputLabel htmlFor="filter-location">
+                {props.texts.FilterLocation}
+              </InputLabel>
               <Select
                 value={values}
                 inputProps={{
@@ -67,7 +69,7 @@ const Filter = () => {
             {/*Property Type Form*/}
             <FormControl className={classes.formControl}>
               <InputLabel htmlFor="filter-Property-Type">
-                Property-Type
+                {props.texts.FilterType}
               </InputLabel>
               <Select
                 value={values}
@@ -84,7 +86,9 @@ const Filter = () => {
             </FormControl>
             {/*Sale/Rent*/}
             <FormControl className={classes.formControl}>
-              <InputLabel htmlFor="filter-Sale-Rent">Sale-Rent</InputLabel>
+              <InputLabel htmlFor="filter-Sale-Rent">
+                {props.texts.FilterSaleType}
+              </InputLabel>
               <Select
                 value={values}
                 inputProps={{
@@ -99,7 +103,9 @@ const Filter = () => {
             </FormControl>
             {/*Furnished*/}
             <FormControl className={classes.formControl}>
-              <InputLabel htmlFor="filter-Furnished">Furnished</InputLabel>
+              <InputLabel htmlFor="filter-Furnished">
+                {props.texts.FilterFurniture}
+              </InputLabel>
               <Select
                 value={values}
                 inputProps={{
@@ -114,7 +120,9 @@ const Filter = () => {
             </FormControl>
             {/*Rooms*/}
             <FormControl className={classes.formControl}>
-              <InputLabel htmlFor="filter-rooms">Rooms</InputLabel>
+              <InputLabel htmlFor="filter-rooms">
+                {props.texts.FilterRooms}
+              </InputLabel>
               <Select
                 value={values}
                 inputProps={{
@@ -138,10 +146,10 @@ const Filter = () => {
                 alignItems: "center"
               }}
             >
-              <p>Price</p>
+              <p> {props.texts.FilterPrice}</p>
               <TextField
                 id="standard-number"
-                label="Max"
+                label={props.texts.FilterPriceMax}
                 value={values.age}
                 type="number"
                 className={classes.textField}
@@ -152,7 +160,7 @@ const Filter = () => {
               />
               <TextField
                 id="standard-number"
-                label="Min"
+                label={props.texts.FilterPriceMin}
                 value={values.age}
                 type="number"
                 className={classes.textField}

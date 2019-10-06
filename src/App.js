@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
@@ -14,6 +14,8 @@ import AboutUs from "./components/AboutUs";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GalleryPage from "./components/GalleryPage";
 import _404 from "./components/404";
+import textsFile from "./texts.json";
+import textsFileEn from "./textEn.json";
 
 const Wrapper = styled.div`
   width: 90%;
@@ -25,22 +27,29 @@ const Wrapper = styled.div`
   border-radius: 5px;
 `;
 function App() {
+  const [lang, setLang] = useState(true);
+  const handleLangChange = () => {
+    setLang(!lang);
+  };
   return (
     <Router className="App">
-      <Navbar />
+      <Navbar
+        texts={lang ? textsFileEn : textsFile}
+        switchLang={handleLangChange}
+      />
       <Switch>
         <Route exact path="/">
-          <Header />
+          <Header texts={lang ? textsFileEn : textsFile} />
           <Wrapper>
-            <Features />
-            <Team />
+            <Features texts={lang ? textsFileEn : textsFile} />
+            <Team texts={lang ? textsFileEn : textsFile} />
           </Wrapper>
-          <Gallery />
+          <Gallery texts={lang ? textsFileEn : textsFile} />
           <Wrapper style={{ top: 0, background: "#555555" }}>
-            <Quotes />
+            <Quotes texts={lang ? textsFileEn : textsFile} />
           </Wrapper>
-          <Packages />
-          <Map />
+          <Packages texts={lang ? textsFileEn : textsFile} />
+          <Map texts={lang ? textsFileEn : textsFile} />
         </Route>
         <Route path="/about-us">
           <AboutUs />
@@ -53,7 +62,7 @@ function App() {
           <_404 />
         </Route>
       </Switch>
-      <Footer />
+      <Footer texts={lang ? textsFileEn : textsFile} />
     </Router>
   );
 }

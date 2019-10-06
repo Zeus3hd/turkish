@@ -1,10 +1,10 @@
 import React from "react";
 
-const Map = () => {
+const Map = props => {
   return (
     <div style={{ margin: "3rem 0" }}>
       <h1 style={{ textAlign: "center", color: "#555555", margin: "3rem 0" }}>
-        Our Office Location
+        {props.texts.MapLocation}
       </h1>
       <div className="gmap_canvas">
         <iframe

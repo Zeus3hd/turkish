@@ -13,10 +13,7 @@ const Header = props => {
       <HeaderContent>
         <HeaderText>
           <h2>Turkish Heights</h2>
-          <p>
-            The resulting icon can be used as is, or included as a child for
-            other Material-UI components that use icons.
-          </p>
+          <p>{props.texts.HeaderParagraph}</p>
         </HeaderText>
       </HeaderContent>
       <ScrollButton>

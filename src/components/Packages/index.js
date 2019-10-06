@@ -19,25 +19,25 @@ const PackageInfo = styled.div`
   padding: 1rem;
 `;
 
-const Packages = () => {
+const Packages = props => {
   return (
     <Wrapper>
       <Grid container justify="space-evenly">
         <Grid item xs={12} sm={3}>
           <PackageInfo style={{ fontWeight: "bolder", color: "#555555" }}>
-            <h2>Package One</h2>
+            <h2>{props.texts.PackageTitle1}</h2>
             <h3>$0.00</h3>
             <Divider variant="middle" style={{ margin: "2rem" }} />
-            <p>Offer number one</p>
+            <p>{props.texts.PackageOffer1_1}</p>
             <Divider variant="middle" style={{ margin: "2rem" }} />
-            <p>Offer number two</p>
+            <p>{props.texts.PackageOffer1_2}</p>
             <Divider variant="middle" style={{ margin: "2rem" }} />
-            <p>Offer number two</p>
+            <p>{props.texts.PackageOffer1_3}</p>
             <Divider variant="middle" style={{ margin: "2rem" }} />
             <Grid container>
               <Grid item xs={12} sm={12}>
                 <Button color="secondary" variant="contained">
-                  Order Now
+                  {props.texts.PackageButton1}
                 </Button>
               </Grid>
             </Grid>
@@ -52,19 +52,19 @@ const Packages = () => {
               color: "#fff"
             }}
           >
-            <h2>Package One</h2>
-            <h3>$99.99</h3>
+            <h2>{props.texts.PackageTitle2}</h2>
+            <h3>$0.00</h3>
             <Divider variant="middle" style={{ margin: "2rem" }} />
-            <p>Offer number one</p>
+            <p>{props.texts.PackageOffer2_1}</p>
             <Divider variant="middle" style={{ margin: "2rem" }} />
-            <p>Offer number two</p>
+            <p>{props.texts.PackageOffer2_2}</p>
             <Divider variant="middle" style={{ margin: "2rem" }} />
-            <p>Offer number two</p>
+            <p>{props.texts.PackageOffer2_3}</p>
             <Divider variant="middle" style={{ margin: "2rem" }} />
             <Grid container>
               <Grid item xs={12} sm={12}>
                 <Button color="secondary" variant="contained">
-                  Order Now
+                  {props.texts.PackageButton2}
                 </Button>
               </Grid>
             </Grid>
@@ -72,19 +72,19 @@ const Packages = () => {
         </Grid>
         <Grid item xs={12} sm={3}>
           <PackageInfo style={{ fontWeight: "bolder", color: "#555555" }}>
-            <h2>Package One</h2>
-            <h3>$179.99</h3>
+            <h2>{props.texts.PackageTitle3}</h2>
+            <h3>$0.00</h3>
             <Divider variant="middle" style={{ margin: "2rem" }} />
-            <p>Offer number one</p>
+            <p>{props.texts.PackageOffer3_1}</p>
             <Divider variant="middle" style={{ margin: "2rem" }} />
-            <p>Offer number two</p>
+            <p>{props.texts.PackageOffer3_2}</p>
             <Divider variant="middle" style={{ margin: "2rem" }} />
-            <p>Offer number two</p>
+            <p>{props.texts.PackageOffer3_3}</p>
             <Divider variant="middle" style={{ margin: "2rem" }} />
             <Grid container>
               <Grid item xs={12} sm={12}>
                 <Button color="secondary" variant="contained">
-                  Order Now
+                  {props.texts.PackageButton3}
                 </Button>
               </Grid>
             </Grid>

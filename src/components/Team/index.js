@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     height: 150
   }
 });
-const Features = () => {
+const Features = props => {
   const classes = useStyles();
 
   return (
@@ -36,18 +36,15 @@ const Features = () => {
       }}
     >
       <Grid item xs={12}>
-        <h2>-Our Team-</h2>
+        <h2>-{props.texts.OurTeam}-</h2>
         <hr style={{ width: "30%", opacity: 0.5 }} />
       </Grid>
       <Grid item xs={12} sm={3}>
         <Card style={{ margin: "1rem" }}>
           <CardContent style={{ display: "flex", flexDirection: "column" }}>
             <Avatar src={avatar1} className={classes.bigAvatar} />
-            <h3 style={{ color: "#555555" }}>Abd Al-Kareem</h3>
-            <p>
-              If you aren’t satisfied with the build tool and configuration
-              choices
-            </p>
+            <h3 style={{ color: "#555555" }}>{props.texts.TeamName1}</h3>
+            <p>{props.texts.TeamParagraph1}</p>
             <div>
               <Button>
                 <FacebookIcon style={{ color: "#555555" }} />
@@ -63,11 +60,8 @@ const Features = () => {
         <Card style={{ margin: "1rem" }}>
           <CardContent style={{ display: "flex", flexDirection: "column" }}>
             <Avatar src={avatar2} className={classes.bigAvatar} />
-            <h3 style={{ color: "#555555" }}>Yunus Sezgin</h3>
-            <p>
-              If you aren’t satisfied with the build tool and configuration
-              choices
-            </p>
+            <h3 style={{ color: "#555555" }}>{props.texts.TeamName2}</h3>
+            <p>{props.texts.TeamParagraph2}</p>
             <div>
               <Button>
                 <FacebookIcon style={{ color: "#555555" }} />
@@ -83,11 +77,8 @@ const Features = () => {
         <Card style={{ margin: "1rem" }}>
           <CardContent style={{ display: "flex", flexDirection: "column" }}>
             <Avatar src={avatar3} className={classes.bigAvatar} />
-            <h3 style={{ color: "#555555" }}>Bandar Abudana</h3>
-            <p>
-              If you aren’t satisfied with the build tool and configuration
-              choices
-            </p>
+            <h3 style={{ color: "#555555" }}>{props.texts.TeamName3}</h3>
+            <p>{props.texts.TeamParagraph3}</p>
             <div>
               <Button>
                 <FacebookIcon style={{ color: "#555555" }} />

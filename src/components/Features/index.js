@@ -18,37 +18,25 @@ const Features = props => {
       }}
     >
       <Grid item xs={12}>
-        <h2>{props.title ? props.title : "-Why Us-"}</h2>
+        <h2>{props.title ? props.title : `-${props.texts.WhyUs}-`}</h2>
         <hr style={{ width: "30%", opacity: 0.5 }} />
       </Grid>
       <Grid item xs={12} sm={3}>
         <AvTimerIcon style={{ fontSize: "5rem", marginBottom: "1.5rem" }} />
-        <h2>Title Here</h2>
-        <p style={{ padding: "15px" }}>
-          If you aren’t satisfied with the build tool and configuration choices,
-          you can eject at any time. This command will remove the single build
-          dependency from your project.
-        </p>
+        <h2>{props.texts.FeaturesTitle1}</h2>
+        <p style={{ padding: "15px" }}>{props.texts.FeaturesParagraph1}</p>
       </Grid>
       <Grid item xs={12} sm={3}>
         <ApartmentIcon style={{ fontSize: "5rem", marginBottom: "2rem" }} />
-        <h2>Title Here</h2>
-        <p style={{ padding: "15px" }}>
-          If you aren’t satisfied with the build tool and configuration choices,
-          you can eject at any time. This command will remove the single build
-          dependency from your project.
-        </p>
+        <h2>{props.texts.FeaturesTitle2}</h2>
+        <p style={{ padding: "15px" }}>{props.texts.FeaturesParagraph2}</p>
       </Grid>
       <Grid item xs={12} sm={3}>
         <MonetizationOnIcon
           style={{ fontSize: "5rem", marginBottom: "2rem" }}
         />
-        <h2>Title Here</h2>
-        <p style={{ padding: "15px" }}>
-          If you aren’t satisfied with the build tool and configuration choices,
-          you can eject at any time. This command will remove the single build
-          dependency from your project.
-        </p>
+        <h2>{props.texts.FeaturesTitle3}</h2>
+        <p style={{ padding: "15px" }}>{props.texts.FeaturesParagraph3}</p>
       </Grid>
     </Grid>
   );

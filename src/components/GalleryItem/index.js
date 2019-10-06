@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: theme.typography.fontWeightRegular
   }
 }));
-const GalleryItem = () => {
+const GalleryItem = props => {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -70,7 +70,7 @@ const GalleryItem = () => {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
+        title={props.texts.GalleryItemTitle}
         subheader="September 14, 2016"
       />
       <CardMedia
@@ -85,10 +85,10 @@ const GalleryItem = () => {
           color="primary"
           component="p"
         >
-          Price: 170.000$
+          {props.texts.GalleryItemPrice}
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p">
-          2 bedroom apartment with 2 bathrooms - 170 sqt ft - Beach View
+          {props.texts.GalleryItemParagraph}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -112,13 +112,13 @@ const GalleryItem = () => {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography variant="subtitle2" color="primary" component="p">
-            Price: 170.000$
+            {props.texts.GalleryItemPrice}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Location: Istanbul-Esenyurt
+            {props.texts.GalleryItemLocation}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Type: Compound
+            {props.texts.GalleyItemType}
           </Typography>
           <ExpansionPanel className={classes.expandable}>
             <ExpansionPanelSummary
@@ -127,15 +127,11 @@ const GalleryItem = () => {
               id="panel1a-header"
             >
               <Typography className={classes.heading}>
-                Features Panel
+                {props.texts.GalleryItemFeatures}
               </Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
-              <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
-              </Typography>
+              <Typography>{props.texts.GalleryItemDetails}</Typography>
             </ExpansionPanelDetails>
           </ExpansionPanel>
         </CardContent>

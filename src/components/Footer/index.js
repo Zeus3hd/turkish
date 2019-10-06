@@ -30,18 +30,13 @@ const Wrapper = styled.div`
     padding-left: 2rem;
   }
 `;
-const Footer = () => {
+const Footer = props => {
   return (
     <Wrapper>
       <Grid container spacing={3} justify="space-between">
         <Grid xs={12} sm={3} item>
           <img style={{ width: "100%" }} src={logo} alt="logo" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-            pharetra sit amet urna nec imperdiet. Morbi viverra, augue non
-            vehicula tempor, sem ante ultrices nisi, at imperdiet elit leo
-            semper urna.
-          </p>
+          <p>{props.texts.FooterParagraph}</p>
           <p
             style={{
               display: "flex",
@@ -60,21 +55,21 @@ const Footer = () => {
           </p>
         </Grid>
         <Grid sm={3} xs={12} item className="footer-links">
-          <h5>OUR SERVICES</h5>
+          <h5>{props.texts.FooterOurServices}</h5>
           <a href="#dead">Service number one</a>
           <a href="#dead">Service number two</a>
           <a href="#dead">Service number three</a>
           <a href="#dead">Service number four</a>
         </Grid>
         <Grid sm={3} xs={12} item className="footer-links">
-          <h5>EXPLORE LINKS</h5>
+          <h5>{props.texts.FooterLinks}</h5>
           <a href="#dead">Link number one</a>
           <a href="#dead">Link number two</a>
           <a href="#dead">Link number three</a>
           <a href="#dead">Link number four</a>
         </Grid>
         <Grid item sm={3} xs={12}>
-          <h5>FOLLOW US:</h5>
+          <h5>{props.texts.FooterFollow}</h5>
           <div style={{ display: "flex" }}>
             <a href="#dead" style={{ margin: "0.5rem" }}>
               <FacebookIcon />
