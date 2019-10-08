@@ -85,7 +85,8 @@ const GalleryItem = props => {
           color="primary"
           component="p"
         >
-          {props.texts.GalleryItemPrice}
+          {props.texts.GalleryItemPrice} <span>{props.price}</span>
+          <span>{props.currency}</span>
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p">
           {props.texts.GalleryItemParagraph}
@@ -112,7 +113,8 @@ const GalleryItem = props => {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography variant="subtitle2" color="primary" component="p">
-            {props.texts.GalleryItemPrice}
+            {props.texts.GalleryItemPrice} <span>{props.price}</span>
+            <span>{props.currency}</span>
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             {props.texts.GalleryItemLocation}

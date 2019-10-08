@@ -11,6 +11,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -169,6 +170,14 @@ const Filter = props => {
                 }}
                 margin="normal"
               />
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={props.handlePriceChange}
+                style={{ alignSelf: "center", justifySelf: "center" }}
+              >
+                Conver Currency
+              </Button>
             </FormControl>
           </form>
         </ExpansionPanelDetails>

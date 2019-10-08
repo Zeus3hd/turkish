@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import GalleryItem from "../GalleryItem";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
@@ -6,6 +6,19 @@ import Button from "@material-ui/core/Button";
 import Filter from "../Filter";
 import { Link } from "react-router-dom";
 const Gallery = props => {
+  const [exchangeRate, setExchangeRate] = useState(5.83);
+  const [price, setPrice] = useState(170000);
+  const [currency, setCurrency] = useState("$");
+  const handlePriceChange = () => {
+    if (currency === "$") {
+      setPrice(exchangeRate * price);
+      setCurrency("₺");
+    } else {
+      setPrice(price / exchangeRate);
+
+      setCurrency("$");
+    }
+  };
   return (
     <Container>
       <Grid container justify="center">
@@ -15,36 +28,41 @@ const Gallery = props => {
       </Grid>
       <Grid container justify="center">
         <Grid item style={{ width: "100%", marginBottom: "3rem" }}>
-          <Filter texts={props.texts} />
+          <Filter
+            texts={props.texts}
+            price={price}
+            currency={currency}
+            handlePriceChange={handlePriceChange}
+          />
         </Grid>
       </Grid>
       <Grid container justify="space-between" spacing={2}>
         <Grid item xs={12} sm={3}>
-          <GalleryItem texts={props.texts} />
+          <GalleryItem texts={props.texts} price={price} currency={currency} />
         </Grid>
         <Grid item xs={12} sm={3}>
-          <GalleryItem texts={props.texts} />
+          <GalleryItem texts={props.texts} price={price} currency={currency} />
         </Grid>
         <Grid item xs={12} sm={3}>
-          <GalleryItem texts={props.texts} />
+          <GalleryItem texts={props.texts} price={price} currency={currency} />
         </Grid>
         <Grid item xs={12} sm={3}>
-          <GalleryItem texts={props.texts} />
+          <GalleryItem texts={props.texts} price={price} currency={currency} />
         </Grid>
         <Grid item xs={12} sm={3}>
-          <GalleryItem texts={props.texts} />
+          <GalleryItem texts={props.texts} price={price} currency={currency} />
         </Grid>
         <Grid item xs={12} sm={3}>
-          <GalleryItem texts={props.texts} />
+          <GalleryItem texts={props.texts} price={price} currency={currency} />
         </Grid>
         <Grid item xs={12} sm={3}>
-          <GalleryItem texts={props.texts} />
+          <GalleryItem texts={props.texts} price={price} currency={currency} />
         </Grid>
         <Grid item xs={12} sm={3}>
-          <GalleryItem texts={props.texts} />
+          <GalleryItem texts={props.texts} price={price} currency={currency} />
         </Grid>
         <Grid item xs={12} sm={3}>
-          <GalleryItem texts={props.texts} />
+          <GalleryItem texts={props.texts} price={price} currency={currency} />
         </Grid>
       </Grid>
       <Grid container justify="center">

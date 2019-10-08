@@ -28,9 +28,11 @@ const Wrapper = styled.div`
 `;
 function App() {
   const [lang, setLang] = useState(true);
+
   const handleLangChange = () => {
     setLang(!lang);
   };
+
   return (
     <Router className="App">
       <Navbar
